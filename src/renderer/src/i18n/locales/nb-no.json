@@ -1,0 +1,64 @@
+{
+  "agent": {
+    "add": {
+      "description": "Håndter komplekse oppgaver med ulike verktøy",
+      "error": {
+        "failed": "Kunne ikke legge til agent",
+        "invalid_agent": "Ugyldig agent"
+      },
+      "title": "Legg til agent",
+      "type": {
+        "placeholder": "Velg en agenttype"
+      }
+    },
+    "delete": {
+      "content": "Sletting av agenten vil tvangsstoppe og slette alle økter tilknyttet agenten. Er du sikker?",
+      "error": {
+        "failed": "Kunne ikke slette agenten"
+      },
+      "title": "Slett agent"
+    },
+    "edit": {
+      "title": "Rediger agent"
+    }
+  },
+  "assistants": {
+    "title": "Assistenter",
+    "add": "Legg til assistent",
+    "search": "Søk assistenter"
+  },
+  "settings": {
+    "title": "Innstillinger",
+    "language": {
+      "title": "Språk",
+      "label": "Velg språk"
+    },
+    "theme": {
+      "dark": "Mørk",
+      "light": "Lys",
+      "system": "System"
+    }
+  },
+  "common": {
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "delete": "Slett",
+    "edit": "Rediger",
+    "close": "Lukk",
+    "ok": "OK",
+    "yes": "Ja",
+    "no": "Nei"
+  },
+  "provider": {
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "gemini": "Google Gemini",
+    "ollama": "Ollama",
+    "lmstudio": "LM Studio"
+  },
+  "title": {
+    "home": "Hjem",
+    "settings": "Innstillinger",
+    "apps": "Apper"
+  }
+}

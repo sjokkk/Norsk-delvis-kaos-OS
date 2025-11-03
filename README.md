@@ -29,12 +29,12 @@
 </div>
 
 <h1 align="center">
-  <a href="https://github.com/CherryHQ/cherry-studio/releases">
+  <a href="https://github.com/sjokkk/Norsk-delvis-kaos-OS/releases">
     <img src="https://github.com/CherryHQ/cherry-studio/blob/main/build/icon.png?raw=true" width="150" height="150" alt="banner" /><br>
   </a>
 </h1>
 
-<p align="center">English | <a href="./docs/README.zh.md">中文</a> | <a href="https://cherry-ai.com">Official Site</a> | <a href="https://docs.cherry-ai.com/cherry-studio-wen-dang/en-us">Documents</a> | <a href="./docs/dev.md">Development</a> | <a href="https://github.com/CherryHQ/cherry-studio/issues">Feedback</a><br></p>
+<p align="center">Norsk | <a href="https://github.com/sjokkk/Norsk-delvis-kaos-OS">GitHub</a> | <a href="https://github.com/sjokkk/Norsk-delvis-kaos-OS/issues">Feedback</a><br></p>
 
 <div align="center">
 
@@ -61,13 +61,16 @@
  <a href="https://www.producthunt.com/posts/cherry-studio?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cherry&#0045;studio" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=496640&theme=light" alt="Cherry&#0032;Studio - AI&#0032;Chatbots&#0044;&#0032;AI&#0032;Desktop&#0032;Client | Product Hunt" width="220" height="55" /></a>
 </div>
 
-# 🍒 Cherry Studio
+# 🇳🇴 Norsk Mini OS
 
-Cherry Studio is a desktop client that supports multiple LLM providers, available on Windows, Mac and Linux.
+Norsk Mini OS er en forenklet norsk AI-assistent for Windows 8.1 (32-bit).
 
-👏 Join [Telegram Group](https://t.me/CherryStudioAI)｜[Discord](https://discord.gg/wez8HtpxqQ) | [QQ Group(575014769)](https://qm.qq.com/q/lo0D4qVZKi)
-
-❤️ Like Cherry Studio? Give it a star 🌟 or [Sponsor](docs/sponsor.md) to support the development!
+Dette er en spesialtilpasset versjon av Cherry Studio, optimalisert for:
+- **Windows 8.1 kompatibilitet** (32-bit)
+- **Norsk språk** som standard
+- **Redusert størrelse** for portable installasjoner
+- **Essensielle funksjoner** kun (10 assistenter i stedet for 300+)
+- **Mulighet for USB-installasjon** uten ekstra nedlastinger
 
 # 🌠 Screenshot
 
