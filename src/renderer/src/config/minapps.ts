@@ -14,12 +14,14 @@ import DevvAppLogo from '@renderer/assets/images/apps/devv.png?url'
 import DifyAppLogo from '@renderer/assets/images/apps/dify.svg?url'
 import DoubaoAppLogo from '@renderer/assets/images/apps/doubao.png?url'
 import DuckDuckGoAppLogo from '@renderer/assets/images/apps/duckduckgo.webp?url'
+import ExcelLogo from '@renderer/assets/images/apps/excel.svg?url'
 import FeloAppLogo from '@renderer/assets/images/apps/felo.png?url'
 import FlowithAppLogo from '@renderer/assets/images/apps/flowith.svg?url'
 import GeminiAppLogo from '@renderer/assets/images/apps/gemini.png?url'
 import GensparkLogo from '@renderer/assets/images/apps/genspark.jpg?url'
 import GithubCopilotLogo from '@renderer/assets/images/apps/github-copilot.webp?url'
 import GoogleAppLogo from '@renderer/assets/images/apps/google.svg?url'
+import GoogleSheetsLogo from '@renderer/assets/images/apps/google-sheets.svg?url'
 import GrokAppLogo from '@renderer/assets/images/apps/grok.png?url'
 import GrokXAppLogo from '@renderer/assets/images/apps/grok-x.png?url'
 import HuggingChatLogo from '@renderer/assets/images/apps/huggingchat.svg?url'
@@ -29,6 +31,7 @@ import LeChatLogo from '@renderer/assets/images/apps/lechat.png?url'
 import LingAppLogo from '@renderer/assets/images/apps/ling.png?url'
 import LongCatAppLogo from '@renderer/assets/images/apps/longcat.svg?url'
 import MetasoAppLogo from '@renderer/assets/images/apps/metaso.webp?url'
+import Microsoft365Logo from '@renderer/assets/images/apps/microsoft-365.svg?url'
 import MonicaLogo from '@renderer/assets/images/apps/monica.webp?url'
 import n8nLogo from '@renderer/assets/images/apps/n8n.svg?url'
 import NamiAiLogo from '@renderer/assets/images/apps/nm.png?url'
@@ -194,6 +197,27 @@ const ORIGIN_DEFAULT_MIN_APPS: MinAppType[] = [
     style: {
       padding: 5
     }
+  },
+  {
+    id: 'google-sheets',
+    name: 'Google Sheets',
+    url: 'https://docs.google.com/spreadsheets/',
+    logo: GoogleSheetsLogo,
+    bodered: true
+  },
+  {
+    id: 'microsoft-365',
+    name: 'Microsoft 365',
+    url: 'https://www.office.com/',
+    logo: Microsoft365Logo,
+    bodered: true
+  },
+  {
+    id: 'excel-online',
+    name: 'Excel Online',
+    url: 'https://www.office.com/launch/excel',
+    logo: ExcelLogo,
+    bodered: true
   },
   {
     id: 'baidu-ai-chat',
