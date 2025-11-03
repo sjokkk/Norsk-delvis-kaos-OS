@@ -33,6 +33,25 @@
   outline: none;
 }
 
+.ant-btn:not(:disabled) {
+  transition: 
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease-out,
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out,
+    color 0.2s ease-out;
+}
+
+.ant-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-btn:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
 /* Align lucide icon in Button */
 .ant-btn .ant-btn-icon {
   display: inline-flex;
@@ -114,6 +133,10 @@
   overflow: hidden;
   border-radius: var(--ant-border-radius-lg);
   user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: animation-slide-down 0.2s ease-out;
 }
 
 .ant-dropdown .ant-dropdown-menu {
@@ -150,6 +173,10 @@
 
 .ant-popover .ant-popover-inner {
   border: 0.5px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: animation-scale-in 0.2s ease-out;
 }
 
 .ant-popover .ant-popover-inner .ant-popover-inner-content {
@@ -169,6 +196,10 @@
   border-radius: 10px;
   border: 0.5px solid var(--color-border);
   padding: 0 0 8px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: animation-scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ant-modal:not(.ant-modal-confirm) .ant-modal-content .ant-modal-close {
