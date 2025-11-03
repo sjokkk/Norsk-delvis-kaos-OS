@@ -1,13 +1,13 @@
 {
-  "name": "CherryStudio",
-  "version": "1.7.0-beta.3",
+  "name": "NorskMiniOS",
+  "version": "1.0.0",
   "private": true,
-  "description": "A powerful AI assistant for producer.",
+  "description": "En enkel norsk AI-assistent",
   "main": "./out/main/index.js",
-  "author": "support@cherry-ai.com",
-  "homepage": "https://github.com/CherryHQ/cherry-studio",
+  "author": "Norsk Delvis Kaos OS",
+  "homepage": "https://github.com/sjokkk/Norsk-delvis-kaos-OS",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=18.0.0"
   },
   "workspaces": {
     "packages": [
@@ -31,9 +31,8 @@
     "build": "npm run typecheck && electron-vite build",
     "build:check": "yarn lint && yarn test",
     "build:unpack": "dotenv npm run build && electron-builder --dir",
-    "build:win": "dotenv npm run build && electron-builder --win --x64 --arm64",
-    "build:win:x64": "dotenv npm run build && electron-builder --win --x64",
-    "build:win:arm64": "dotenv npm run build && electron-builder --win --arm64",
+    "build:win": "dotenv npm run build && electron-builder --win --ia32",
+    "build:win:ia32": "dotenv npm run build && electron-builder --win --ia32",
     "build:mac": "dotenv npm run build && electron-builder --mac --arm64 --x64",
     "build:mac:arm64": "dotenv npm run build && electron-builder --mac --arm64",
     "build:mac:x64": "dotenv npm run build && electron-builder --mac --x64",

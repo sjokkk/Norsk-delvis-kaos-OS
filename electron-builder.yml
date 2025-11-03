@@ -1,15 +1,10 @@
-appId: com.kangfenmao.CherryStudio
-productName: Cherry Studio
+appId: com.norskdelviskaos.MiniOS
+productName: Norsk Mini OS
 electronLanguages:
-  - zh-CN
-  - zh-TW
   - en-US
-  - ja # macOS/linux/win
-  - ru # macOS/linux/win
-  - zh_CN # for macOS
-  - zh_TW # for macOS
+  - nb-NO
   - en # for macOS
-  - de
+  - nb # for macOS
 directories:
   buildResources: build
 
@@ -73,25 +68,15 @@ extraResources:
     to: "claude-code-plugins"
 
 win:
-  executableName: Cherry Studio
-  artifactName: ${productName}-${version}-${arch}-setup.${ext}
+  executableName: Norsk Mini OS
+  artifactName: ${productName}-${version}-ia32-portable.${ext}
   target:
-    - target: nsis
     - target: portable
-  signtoolOptions:
-    sign: scripts/win-sign.js
+      arch:
+        - ia32
   verifyUpdateCodeSignature: false
-nsis:
-  artifactName: ${productName}-${version}-${arch}-setup.${ext}
-  shortcutName: ${productName}
-  uninstallDisplayName: ${productName}
-  createDesktopShortcut: always
-  allowToChangeInstallationDirectory: true
-  oneClick: false
-  include: build/nsis-installer.nsh
-  buildUniversalInstaller: false
 portable:
-  artifactName: ${productName}-${version}-${arch}-portable.${ext}
+  artifactName: ${productName}-${version}-ia32-portable.${ext}
   buildUniversalInstaller: false
 mac:
   entitlementsInherit: build/entitlements.mac.plist
