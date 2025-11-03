@@ -1,7 +1,13 @@
 import type { Message, Topic } from '@renderer/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { copyMessageAsPlainText, copyTopicAsMarkdown, copyTopicAsPlainText } from '../copy'
+import {
+  copyMessageAsPlainText,
+  copyTopicAsMarkdown,
+  copyTopicAsPlainText,
+  copyTodaysContent,
+  filterTodaysMessages
+} from '../copy'
 
 // Mock dependencies
 vi.mock('@renderer/utils/export', () => ({
@@ -191,6 +197,89 @@ describe('copy', () => {
       await expect(copyTopicAsPlainText(undefined)).rejects.toThrow('Cannot read properties of undefined')
       // @ts-expect-error 测试类型错误
       await expect(copyMessageAsPlainText(null)).rejects.toThrow('Cannot read properties of null')
+    })
+  })
+
+  describe('filterTodaysMessages', () => {
+    it('should filter messages created today', () => {
+      const now = new Date()
+      const todayMessage = createTestMessage({ createdAt: now.toISOString() })
+      const yesterdayMessage = createTestMessage({
+        createdAt: new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()
+      })
+      const tomorrowMessage = createTestMessage({
+        createdAt: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString()
+      })
+
+      const messages = [yesterdayMessage, todayMessage, tomorrowMessage]
+      const todaysMessages = filterTodaysMessages(messages)
+
+      expect(todaysMessages).toHaveLength(1)
+      expect(todaysMessages[0].id).toBe(todayMessage.id)
+    })
+
+    it('should return empty array when no messages are from today', () => {
+      const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000)
+      const messages = [
+        createTestMessage({ createdAt: yesterday.toISOString() }),
+        createTestMessage({ createdAt: yesterday.toISOString() })
+      ]
+
+      const todaysMessages = filterTodaysMessages(messages)
+      expect(todaysMessages).toHaveLength(0)
+    })
+
+    it('should handle empty messages array', () => {
+      const todaysMessages = filterTodaysMessages([])
+      expect(todaysMessages).toHaveLength(0)
+    })
+  })
+
+  describe('copyTodaysContent', () => {
+    beforeEach(() => {
+      vi.mock('@renderer/databases', () => ({
+        default: {
+          topics: {
+            toArray: vi.fn()
+          }
+        }
+      }))
+    })
+
+    it('should show info toast when no topics exist', async () => {
+      const db = await import('@renderer/databases')
+      vi.mocked(db.default.topics.toArray).mockResolvedValue([])
+
+      const mockedToastInfo = vi.fn()
+      Object.defineProperty(global.window, 'toast', {
+        value: { ...mockedToast, info: mockedToastInfo },
+        writable: true
+      })
+
+      await copyTodaysContent()
+
+      expect(mockedToastInfo).toHaveBeenCalledWith('message.copy.today.no_topics')
+    })
+
+    it('should show info toast when no messages from today', async () => {
+      const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000)
+      const db = await import('@renderer/databases')
+      vi.mocked(db.default.topics.toArray).mockResolvedValue([
+        {
+          id: 'topic-1',
+          messages: [createTestMessage({ createdAt: yesterday.toISOString() })]
+        }
+      ])
+
+      const mockedToastInfo = vi.fn()
+      Object.defineProperty(global.window, 'toast', {
+        value: { ...mockedToast, info: mockedToastInfo },
+        writable: true
+      })
+
+      await copyTodaysContent()
+
+      expect(mockedToastInfo).toHaveBeenCalledWith('message.copy.today.no_messages')
     })
   })
 })
