@@ -1,0 +1,419 @@
+/* Visual Effects CSS - Modern UI Enhancements */
+
+/* Backdrop Blur Effects */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Glass Morphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Overlays */
+.gradient-overlay-primary {
+  position: relative;
+}
+
+.gradient-overlay-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.gradient-overlay-primary:hover::before {
+  opacity: 0.1;
+}
+
+/* Subtle Glow on Hover */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 
+    0 0 20px rgba(var(--color-primary), 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Depth Effects */
+.card-depth-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card-depth-1:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-depth-2 {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card-depth-2:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Smooth Border Transitions */
+.border-transition {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.border-glow {
+  position: relative;
+}
+
+.border-glow::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.border-glow:hover::after {
+  opacity: 0.5;
+}
+
+/* Pulse Effect for Notifications */
+.pulse-notification {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Shimmer Loading Effect */
+.shimmer-loading {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 0%,
+    var(--color-muted) 50%,
+    var(--color-background) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Smooth Color Transitions */
+.color-transition {
+  transition: 
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+/* Focus Ring Enhancement */
+.focus-ring-enhanced:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Interactive Button Enhancements */
+.button-enhanced {
+  position: relative;
+  overflow: hidden;
+  transition: 
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease-out,
+    background-color 0.2s ease-out;
+  will-change: transform;
+}
+
+.button-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button-enhanced:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button-enhanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-enhanced:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth Scroll Enhancement */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Text Gradient Effect */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover Brightness */
+.hover-brightness {
+  transition: filter 0.2s ease-out;
+}
+
+.hover-brightness:hover {
+  filter: brightness(1.1);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animation-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Border Animation */
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border-animated {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.gradient-border-animated::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  background-size: 200% 200%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: gradient-border 3s ease infinite;
+}
+
+/* Modal Backdrop Enhancement */
+.modal-backdrop-enhanced {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: animation-fade-in 0.2s ease-out;
+}
+
+/* Tooltip Enhancement */
+.tooltip-enhanced {
+  position: relative;
+  background: var(--color-popover);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: animation-scale-in 0.2s ease-out;
+}
+
+/* Skeleton Pulse */
+.skeleton-pulse {
+  background: linear-gradient(
+    90deg,
+    var(--color-muted) 25%,
+    var(--color-border) 50%,
+    var(--color-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Micro Interactions */
+.micro-bounce {
+  transition: transform 0.1s ease-out;
+}
+
+.micro-bounce:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar Styling with Visual Enhancement */
+.enhanced-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.enhanced-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.enhanced-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+}
+
+.enhanced-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Interactive Link Enhancement */
+.link-enhanced {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+.link-enhanced::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease-out;
+}
+
+.link-enhanced:hover::after {
+  width: 100%;
+}
+
+/* Elevation Layers */
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.elevation-2 {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.elevation-3 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.elevation-4 {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+/* Performance Optimization Classes */
+.gpu-boost {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
+}
+
+.contain-strict {
+  contain: strict;
+}

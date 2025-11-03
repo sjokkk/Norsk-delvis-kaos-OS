@@ -202,6 +202,20 @@ const AvatarImg = styled(Avatar)`
   margin-top: ${isMac ? '0px' : '2px'};
   border: none;
   cursor: pointer;
+  transition: 
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease-out;
+  will-change: transform;
+  transform: translateZ(0);
+  
+  &:hover {
+    transform: scale(1.1) translateZ(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:active {
+    transform: scale(0.95) translateZ(0);
+  }
 `
 
 const MainMenusContainer = styled.div`
@@ -228,17 +242,30 @@ const Icon = styled.div<{ theme: string }>`
   box-sizing: border-box;
   -webkit-app-region: none;
   border: 0.5px solid transparent;
+  transition: 
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
   &:hover {
     background-color: ${({ theme }) => (theme === 'dark' ? 'var(--color-black)' : 'var(--color-white)')};
     opacity: 0.8;
     cursor: pointer;
+    transform: scale(1.1) translateZ(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     .icon {
       color: var(--color-icon-white);
+      transition: color 0.2s ease-out;
     }
   }
   &.active {
     background-color: ${({ theme }) => (theme === 'dark' ? 'var(--color-black)' : 'var(--color-white)')};
     border: 0.5px solid var(--color-border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     .icon {
       color: var(--color-primary);
     }

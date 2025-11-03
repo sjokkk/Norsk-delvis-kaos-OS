@@ -88,3 +88,210 @@
 .animation-locate-highlight {
   animation: animation-locate-highlight 2.5s ease-in-out;
 }
+
+/* 淡入动画 - Smooth fade in */
+@keyframes animation-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation-fade-in {
+  animation: animation-fade-in 0.3s ease-in-out;
+}
+
+/* 从上滑入动画 - Slide from top */
+@keyframes animation-slide-down {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animation-slide-down {
+  animation: animation-slide-down 0.3s ease-out;
+}
+
+/* 从下滑入动画 - Slide from bottom */
+@keyframes animation-slide-up {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animation-slide-up {
+  animation: animation-slide-up 0.3s ease-out;
+}
+
+/* 缩放进入动画 - Scale in */
+@keyframes animation-scale-in {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animation-scale-in {
+  animation: animation-scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 微妙的悬停缩放 - Subtle hover scale */
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* 微妙的悬停提升 - Subtle hover lift */
+.hover-lift {
+  transition: 
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+  will-change: transform, box-shadow;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 发光效果 - Glow effect */
+@keyframes animation-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(var(--glow-color, 59, 130, 246), 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(var(--glow-color, 59, 130, 246), 0.8);
+  }
+}
+
+.animation-glow {
+  animation: animation-glow 2s ease-in-out infinite;
+}
+
+/* 微妙的晃动 - Subtle shake */
+@keyframes animation-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+.animation-shake {
+  animation: animation-shake 0.5s ease-in-out;
+}
+
+/* 骨架屏加载动画 - Skeleton loading */
+@keyframes animation-skeleton {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animation-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 25%,
+    var(--color-muted) 50%,
+    var(--color-border) 75%
+  );
+  background-size: 200% 100%;
+  animation: animation-skeleton 1.5s ease-in-out infinite;
+}
+
+/* 波纹效果 - Ripple effect */
+@keyframes animation-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animation-ripple {
+  animation: animation-ripple 0.6s ease-out;
+}
+
+/* 弹跳动画 - Bounce animation */
+@keyframes animation-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animation-bounce {
+  animation: animation-bounce 0.6s ease-in-out;
+}
+
+/* 闪烁效果 - Blink effect */
+@keyframes animation-blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+
+.animation-blink {
+  animation: animation-blink 1s ease-in-out infinite;
+}
+
+/* 平滑过渡类 - Smooth transitions */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+  will-change: auto;
+}
+
+.transition-colors {
+  transition: 
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+  will-change: background-color, border-color, color;
+}
+
+.transition-transform {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+/* GPU 加速优化 - GPU acceleration optimization */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
