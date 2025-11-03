@@ -30,12 +30,8 @@ export const copyMessageAsPlainText = async (message: Message) => {
  * @returns Messages created today
  */
 export const filterTodaysMessages = (messages: Message[]): Message[] => {
-  const startOfToday = dayjs().startOf('day')
-  const endOfToday = dayjs().endOf('day')
-
   return messages.filter((message) => {
-    const messageDate = dayjs(message.createdAt)
-    return messageDate.isAfter(startOfToday) && messageDate.isBefore(endOfToday)
+    return dayjs(message.createdAt).isSame(dayjs(), 'day')
   })
 }
 
