@@ -1638,7 +1638,14 @@
     "copied": "Copied!",
     "copy": {
       "failed": "Copy failed",
-      "success": "Copied!"
+      "success": "Copied!",
+      "today": {
+        "header": "Today's Content",
+        "no_topics": "No topics found",
+        "no_messages": "No messages written today",
+        "success": "Copied {{count}} messages from today!",
+        "error": "Failed to copy today's content"
+      }
     },
     "delete": {
       "confirm": {
@@ -4434,6 +4441,7 @@
       "clear_shortcut": "Clear Shortcut",
       "clear_topic": "Clear Messages",
       "copy_last_message": "Copy Last Message",
+      "copy_todays_content": "Copy Today's Content",
       "edit_last_user_message": "Edit Last User Message",
       "enabled": "Enable",
       "exit_fullscreen": "Exit Fullscreen",

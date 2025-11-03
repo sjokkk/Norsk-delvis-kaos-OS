@@ -28,6 +28,7 @@ import {
   removeSpecialCharactersForFileName,
   runAsyncFunction
 } from '@renderer/utils'
+import { copyTodaysContent } from '@renderer/utils/copy'
 import { updateCodeBlock } from '@renderer/utils/markdown'
 import { getMainTextContent } from '@renderer/utils/messageUtils/find'
 import { isTextLikeBlock } from '@renderer/utils/messageUtils/is'
@@ -273,6 +274,10 @@ const Messages: React.FC<MessagesProps> = ({ assistant, topic, setActiveTopic, o
       navigator.clipboard.writeText(getMainTextContent(lastMessage))
       window.toast.success(t('message.copy.success'))
     }
+  })
+
+  useShortcut('copy_todays_content', () => {
+    copyTodaysContent()
   })
 
   useShortcut('edit_last_user_message', () => {
