@@ -20,12 +20,25 @@
     },
     "edit": {
       "title": "Rediger agent"
+    },
+    "session": {
+      "add": {
+        "title": "Legg til økt"
+      }
     }
   },
   "assistants": {
     "title": "Assistenter",
     "add": "Legg til assistent",
-    "search": "Søk assistenter"
+    "search": "Søk assistenter",
+    "presets": {
+      "title": "Forhåndsdefinerte"
+    },
+    "settings": {
+      "temperature": "Temperatur",
+      "maxTokens": "Maks tokens",
+      "topP": "Top P"
+    }
   },
   "settings": {
     "title": "Innstillinger",
@@ -37,7 +50,10 @@
       "dark": "Mørk",
       "light": "Lys",
       "system": "System"
-    }
+    },
+    "general": "Generelt",
+    "appearance": "Utseende",
+    "about": "Om"
   },
   "common": {
     "save": "Lagre",
@@ -47,18 +63,141 @@
     "close": "Lukk",
     "ok": "OK",
     "yes": "Ja",
-    "no": "Nei"
+    "no": "Nei",
+    "add": "Legg til",
+    "remove": "Fjern",
+    "search": "Søk",
+    "loading": "Laster...",
+    "error": "Feil",
+    "success": "Vellykket",
+    "warning": "Advarsel",
+    "info": "Info",
+    "confirm": "Bekreft",
+    "back": "Tilbake",
+    "next": "Neste",
+    "previous": "Forrige",
+    "send": "Send",
+    "clear": "Tøm",
+    "copy": "Kopier",
+    "paste": "Lim inn",
+    "cut": "Klipp ut",
+    "select": "Velg",
+    "selectAll": "Velg alle",
+    "name": "Navn",
+    "description": "Beskrivelse",
+    "settings": "Innstillinger",
+    "help": "Hjelp"
   },
   "provider": {
     "openai": "OpenAI",
     "anthropic": "Anthropic",
     "gemini": "Google Gemini",
     "ollama": "Ollama",
-    "lmstudio": "LM Studio"
+    "lmstudio": "LM Studio",
+    "groq": "Groq",
+    "mistral": "Mistral AI",
+    "azure-openai": "Azure OpenAI",
+    "openrouter": "OpenRouter",
+    "perplexity": "Perplexity",
+    "github": "GitHub",
+    "huggingface": "Hugging Face"
   },
   "title": {
     "home": "Hjem",
     "settings": "Innstillinger",
-    "apps": "Apper"
+    "apps": "Apper",
+    "knowledge": "Kunnskap",
+    "files": "Filer",
+    "translate": "Oversett",
+    "code": "Kode"
+  },
+  "message": {
+    "input": {
+      "placeholder": "Skriv en melding..."
+    },
+    "send": "Send melding",
+    "stop": "Stopp",
+    "regenerate": "Regenerer",
+    "copy": "Kopier",
+    "delete": "Slett"
+  },
+  "error": {
+    "unknown": "En ukjent feil oppstod",
+    "network": "Nettverksfeil",
+    "timeout": "Forespørselen ble tidsavbrutt",
+    "http": {
+      "400": "Ugyldig forespørsel",
+      "401": "Uautorisert",
+      "403": "Ingen tilgang",
+      "404": "Ikke funnet",
+      "429": "For mange forespørsler",
+      "500": "Serverfeil",
+      "502": "Dårlig gateway",
+      "503": "Tjeneste utilgjengelig",
+      "504": "Gateway tidsavbrudd"
+    }
+  },
+  "backup": {
+    "progress": {
+      "title": "Sikkerhetskopierer...",
+      "preparing": "Forbereder...",
+      "copying_files": "Kopierer filer...",
+      "compressing": "Komprimerer...",
+      "preparing_compression": "Forbereder komprimering...",
+      "writing_data": "Skriver data...",
+      "completed": "Fullført"
+    }
+  },
+  "restore": {
+    "progress": {
+      "title": "Gjenoppretter...",
+      "preparing": "Forbereder...",
+      "reading_data": "Leser data...",
+      "extracting": "Pakker ut...",
+      "extracted": "Utpakket",
+      "copying_files": "Kopierer filer...",
+      "completed": "Fullført"
+    }
+  },
+  "minapp": {
+    "title": "Mini-apper"
+  },
+  "paintings": {
+    "title": "Bilder",
+    "image_size_options": {
+      "auto": "Automatisk"
+    },
+    "quality_options": {
+      "auto": "Automatisk",
+      "high": "Høy",
+      "medium": "Middels",
+      "low": "Lav"
+    },
+    "moderation_options": {
+      "auto": "Automatisk",
+      "low": "Lav"
+    },
+    "background_options": {
+      "auto": "Automatisk",
+      "transparent": "Gjennomsiktig",
+      "opaque": "Ugjennomsiktig"
+    }
+  },
+  "files": {
+    "name": "Navn",
+    "size": "Størrelse",
+    "created_at": "Opprettet"
+  },
+  "knowledge": {
+    "title": "Kunnskap"
+  },
+  "notes": {
+    "title": "Notater"
+  },
+  "translate": {
+    "title": "Oversettelse"
+  },
+  "code": {
+    "title": "Kode"
   }
 }
