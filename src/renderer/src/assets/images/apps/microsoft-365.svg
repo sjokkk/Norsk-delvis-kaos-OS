@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <linearGradient id="office365Gradient" x1="24" y1="4" x2="24" y2="44" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#f44336"/>
+    <stop offset="0.33" stop-color="#ff9800"/>
+    <stop offset="0.67" stop-color="#4caf50"/>
+    <stop offset="1" stop-color="#2196f3"/>
+  </linearGradient>
+  <rect x="8" y="8" width="32" height="32" rx="4" fill="url(#office365Gradient)"/>
+  <path fill="#fff" d="M24,12c-6.627,0-12,5.373-12,12s5.373,12,12,12s12-5.373,12-12S30.627,12,24,12z M28,25h-3v7h-2v-7h-3v-2h8V25z"/>
+</svg>
