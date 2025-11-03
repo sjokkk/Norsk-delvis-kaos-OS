@@ -42,7 +42,7 @@ Dette dokumentet sporer alle oppgaver og fremtidig utvikling for Norsk-delvis-ka
 ### Avanserte Funksjoner
 - [ ] Plugin-system
 - [ ] ASR (Automatisk talegjenkjenning) for norsk
-- [ ] Assistent og emne interaksjonsomarbeiding
+- [ ] Assistent og emne interaksjonsrefaktorering
 
 ## ✅ Fullførte Oppgaver
 

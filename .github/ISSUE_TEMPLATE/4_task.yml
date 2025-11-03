@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for creating a task! / Takk for at du oppretter en oppgave!
         This template helps track work items and todos for the project.
-        Dette malen hjelper til med å spore arbeid og oppgaver for prosjektet.
+        Denne malen hjelper til med å spore arbeid og oppgaver for prosjektet.
 
   - type: checkboxes
     id: checklist
@@ -17,7 +17,7 @@ body:
       description: |
         Before creating a task, please verify / Før du oppretter en oppgave, vennligst verifiser
       options:
-        - label: I have checked [TASKS.md](https://github.com/sjokkk/Norsk-delvis-kaos-OS/blob/main/TASKS.md) and [OPPGAVER.md](https://github.com/sjokkk/Norsk-delvis-kaos-OS/blob/main/OPPGAVER.md) for similar tasks
+        - label: I have checked [TASKS.md](../../TASKS.md) and [OPPGAVER.md](../../OPPGAVER.md) for similar tasks
           required: true
         - label: This task is specific and actionable
           required: true
