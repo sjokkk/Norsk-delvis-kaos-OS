@@ -1638,7 +1638,14 @@
     "copied": "Copied!",
     "copy": {
       "failed": "Copy failed",
-      "success": "Copied!"
+      "success": "Copied!",
+      "today": {
+        "header": "Today's Content",
+        "no_topics": "No topics found",
+        "no_messages": "No messages written today",
+        "success": "Copied {{count}} messages from today!",
+        "error": "Failed to copy today's content"
+      }
     },
     "delete": {
       "confirm": {
