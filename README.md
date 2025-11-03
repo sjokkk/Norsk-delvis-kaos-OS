@@ -149,9 +149,11 @@ We're actively working on the following features and improvements:
 - ASR (Automatic Speech Recognition)
 - Assistant and Topic Interaction Refactoring
 
-Track our progress and contribute on our [project board](https://github.com/orgs/CherryHQ/projects/7).
+For detailed task tracking and project management, see:
+- 📋 [TASKS.md](TASKS.md) - English task list and roadmap
+- 📋 [OPPGAVER.md](OPPGAVER.md) - Norwegian task list and roadmap (Norsk oppgaveliste og veikart)
 
-Want to influence our roadmap? Join our [GitHub Discussions](https://github.com/CherryHQ/cherry-studio/discussions) to share your ideas and feedback!
+Want to contribute? Check our task lists above and join our discussions!
 
 # 🌈 Theme
 

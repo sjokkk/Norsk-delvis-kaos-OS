@@ -1,0 +1,75 @@
+name: 📋 Task / Oppgave
+description: Create a new task or work item for the project / Opprett en ny oppgave for prosjektet
+title: '[Task]: '
+labels: ['task']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating a task! / Takk for at du oppretter en oppgave!
+        This template helps track work items and todos for the project.
+        Denne malen hjelper til med å spore arbeid og oppgaver for prosjektet.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Task Checklist / Oppgavesjekkliste
+      description: |
+        Before creating a task, please verify / Før du oppretter en oppgave, vennligst verifiser
+      options:
+        - label: I have checked [TASKS.md](TASKS.md) and [OPPGAVER.md](OPPGAVER.md) for similar tasks
+          required: true
+        - label: This task is specific and actionable
+          required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority / Prioritet
+      description: What is the priority of this task? / Hva er prioriteten for denne oppgaven?
+      options:
+        - High / Høy
+        - Medium / Middels
+        - Low / Lav
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / Kategori
+      description: What category does this task belong to? / Hvilken kategori hører denne oppgaven til?
+      options:
+        - Translation / Oversettelse
+        - Performance / Ytelse
+        - Documentation / Dokumentasjon
+        - UI/UX
+        - Testing / Testing
+        - Infrastructure / Infrastruktur
+        - Other / Annet
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description / Oppgavebeskrivelse
+      description: Please describe the task in detail / Vennligst beskriv oppgaven i detalj
+      placeholder: What needs to be done? / Hva må gjøres?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria / Akseptkriterier
+      description: What defines this task as complete? / Hva definerer denne oppgaven som fullført?
+      placeholder: |
+        - [ ] Criterion 1 / Kriterium 1
+        - [ ] Criterion 2 / Kriterium 2
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes / Tilleggsnotater
+      description: Any additional information / Eventuell tilleggsinformasjon
