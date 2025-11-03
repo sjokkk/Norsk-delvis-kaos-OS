@@ -8,12 +8,12 @@ body:
       value: |
         Thank you for creating a task! / Takk for at du oppretter en oppgave!
         This template helps track work items and todos for the project.
-        Dette malen hjelpet til med å spore arbeid og oppgaver for prosjektet.
+        Dette malen hjelper til med å spore arbeid og oppgaver for prosjektet.
 
   - type: checkboxes
     id: checklist
     attributes:
-      label: Task Checklist / Oppgave sjekkliste
+      label: Task Checklist / Oppgavesjekkliste
       description: |
         Before creating a task, please verify / Før du oppretter en oppgave, vennligst verifiser
       options:
