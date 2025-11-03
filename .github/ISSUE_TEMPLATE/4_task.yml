@@ -17,7 +17,7 @@ body:
       description: |
         Before creating a task, please verify / Før du oppretter en oppgave, vennligst verifiser
       options:
-        - label: I have checked [TASKS.md](../../TASKS.md) and [OPPGAVER.md](../../OPPGAVER.md) for similar tasks
+        - label: I have checked [TASKS.md](TASKS.md) and [OPPGAVER.md](OPPGAVER.md) for similar tasks
           required: true
         - label: This task is specific and actionable
           required: true
