@@ -67,7 +67,7 @@ Dette dokumentet sporer alle oppgaver og fremtidig utvikling for Norsk-delvis-ka
 
 **For å legge til en ny oppgave:**
 1. Sjekk denne filen og [TASKS.md](TASKS.md) for å unngå duplikater
-2. Opprett en GitHub Issue med [Oppgavemal](.github/ISSUE_TEMPLATE/4_task.yml)
+2. Opprett en GitHub Issue med [oppgavemalen](.github/ISSUE_TEMPLATE/4_task.yml)
 3. Oppdater denne filen med den nye oppgaven i riktig seksjon
 
 **For å oppdatere oppgavestatus:**
@@ -75,4 +75,4 @@ Dette dokumentet sporer alle oppgaver og fremtidig utvikling for Norsk-delvis-ka
 2. Flytt fullførte oppgaver til "Fullførte Oppgaver"-seksjonen
 3. Oppdater "Sist oppdatert"-tidsstempelet
 
-For generelle bidrag, se [CONTRIBUTING.md](CONTRIBUTING.md) (på engelsk).
+For å bidra generelt til prosjektet, se [CONTRIBUTING.md](CONTRIBUTING.md) (på engelsk).

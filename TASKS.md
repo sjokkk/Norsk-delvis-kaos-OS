@@ -67,7 +67,7 @@ This document tracks all tasks and future development for the Norsk-delvis-kaos-
 
 **To add a new task:**
 1. Check this file and [OPPGAVER.md](OPPGAVER.md) to avoid duplicates
-2. Create a GitHub Issue using the [Task template](.github/ISSUE_TEMPLATE/4_task.yml)
+2. Create a GitHub Issue using the [Task Issue template](.github/ISSUE_TEMPLATE/4_task.yml)
 3. Update this file with the new task in the appropriate section
 
 **To update task status:**
