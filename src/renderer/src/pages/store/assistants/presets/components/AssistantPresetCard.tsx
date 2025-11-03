@@ -235,9 +235,13 @@ const AgentCardContainer = styled.div`
   padding: 16px;
   overflow: hidden;
   transition:
-    box-shadow 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.2s ease;
+    box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.3s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease;
+  will-change: transform, box-shadow;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 
   --shadow-color: rgba(0, 0, 0, 0.05);
   box-shadow:
@@ -245,9 +249,10 @@ const AgentCardContainer = styled.div`
     0 2px 3px -4px var(--color-border-soft);
   &:hover {
     box-shadow:
-      0 10px 15px -3px var(--color-border-soft),
-      0 4px 6px -4px var(--color-border-soft);
-    transform: translateY(-2px);
+      0 12px 20px -3px rgba(0, 0, 0, 0.1),
+      0 6px 10px -4px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px) translateZ(0);
+    border-color: var(--color-primary);
 
     ${AgentCardHeaderInfoAction} ${HeaderInfoEmoji} {
       opacity: 0;
@@ -255,6 +260,12 @@ const AgentCardContainer = styled.div`
     ${AgentCardHeaderInfoAction} ${MenuButton} {
       opacity: 1;
     }
+  }
+  &:active {
+    transform: translateY(-2px) translateZ(0);
+    box-shadow:
+      0 8px 15px -3px rgba(0, 0, 0, 0.08),
+      0 4px 6px -4px rgba(0, 0, 0, 0.06);
   }
   body[theme-mode='dark'] & {
     --shadow-color: rgba(255, 255, 255, 0.02);
