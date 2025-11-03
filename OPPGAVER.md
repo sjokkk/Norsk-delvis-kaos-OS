@@ -61,4 +61,16 @@ Dette dokumentet sporer alle oppgaver og fremtidig utvikling for Norsk-delvis-ka
 
 **Sist oppdatert:** 2025-11-03
 
-For å bidra til dette prosjektet, vennligst les [CONTRIBUTING.md](CONTRIBUTING.md) og følg våre retningslinjer.
+## Arbeidsflyt for Oppgavestyring
+
+**For å legge til en ny oppgave:**
+1. Sjekk denne filen og [TASKS.md](TASKS.md) for å unngå duplikater
+2. Opprett en GitHub Issue med [Oppgavemal](.github/ISSUE_TEMPLATE/4_task.yml)
+3. Oppdater denne filen med den nye oppgaven i riktig seksjon
+
+**For å oppdatere oppgavestatus:**
+1. Rediger både OPPGAVER.md og TASKS.md for å holde dem synkronisert
+2. Flytt fullførte oppgaver til "Fullførte Oppgaver"-seksjonen
+3. Oppdater "Sist oppdatert"-tidsstempelet
+
+For generelle bidrag, se [CONTRIBUTING.md](CONTRIBUTING.md) (på engelsk).

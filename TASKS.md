@@ -63,4 +63,16 @@ This document tracks all tasks and future development for the Norsk-delvis-kaos-
 
 **Last updated:** 2025-11-03
 
-To contribute to this project, please read [CONTRIBUTING.md](CONTRIBUTING.md) and follow our guidelines.
+## Task Management Workflow
+
+**To add a new task:**
+1. Check this file and [OPPGAVER.md](OPPGAVER.md) to avoid duplicates
+2. Create a GitHub Issue using the [Task template](.github/ISSUE_TEMPLATE/4_task.yml)
+3. Update this file with the new task in the appropriate section
+
+**To update task status:**
+1. Edit both TASKS.md and OPPGAVER.md to keep them synchronized
+2. Move completed tasks to the "Completed Tasks" section
+3. Update the "Last updated" timestamp
+
+For general contributions, see [CONTRIBUTING.md](CONTRIBUTING.md).
