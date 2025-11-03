@@ -84,6 +84,13 @@ const initialState: ShortcutsState = {
       system: false
     },
     {
+      key: 'copy_todays_content',
+      shortcut: ['CommandOrControl', 'Shift', 'T'],
+      editable: true,
+      enabled: true,
+      system: false
+    },
+    {
       key: 'edit_last_user_message',
       shortcut: ['CommandOrControl', 'Shift', 'E'],
       editable: true,
