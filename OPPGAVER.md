@@ -2,6 +2,8 @@
 
 Dette dokumentet sporer alle oppgaver og fremtidig utvikling for Norsk-delvis-kaos-OS prosjektet.
 
+> **Engelsk versjon tilgjengelig:** Se [TASKS.md](TASKS.md) for den engelske versjonen av dette dokumentet.
+
 ## 🎯 Aktive Oppgaver
 
 ### Høy Prioritet
