@@ -75,7 +75,7 @@ For users who prefer fully open-source alternatives:
 3. **OnlyOffice** - Open source office suite
    - Community edition available
 
-## For Enterprise Users (Dad's Work)
+## For Enterprise Users
 
 ### Recommended Approach
 1. **Use Microsoft 365 Mini-App**: If your organization has Microsoft 365 licenses, the web version provides full functionality

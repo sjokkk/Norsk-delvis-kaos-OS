@@ -1,7 +1,7 @@
 # Retail Store Manager Agent
 
 ## Overview
-The Retail Store Manager agent is a specialized AI assistant designed to help store managers in large retail chains with their daily operations and strategic tasks.
+The Retail Store Manager agent is a specialized AI assistant designed to help store managers in large retail chains with their daily operations and strategic tasks. This agent is suitable for both experienced managers seeking optimization advice and newer managers learning best practices in retail operations.
 
 ## Core Capabilities
 
