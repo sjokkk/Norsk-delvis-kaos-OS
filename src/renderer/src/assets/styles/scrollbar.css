@@ -31,10 +31,16 @@ body[theme-mode='light'] {
 ::-webkit-scrollbar-thumb {
   border-radius: var(--scrollbar-thumb-radius);
   background: var(--color-scrollbar-thumb);
+  transition: background-color 0.2s ease, width 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar:hover {
+  width: 8px;
+  height: 8px;
 }
 
 pre:not(.shiki)::-webkit-scrollbar-thumb {

@@ -73,7 +73,13 @@ const TopViewContainer: React.FC<Props> = ({ children }) => {
   const FullScreenContainer: React.FC<PropsWithChildren> = useCallback(({ children }) => {
     return (
       <Box flex={1} position="absolute" w="100%" h="100%" className="topview-fullscreen-container">
-        <Box position="absolute" w="100%" h="100%" onClick={onPop} />
+        <Box 
+          position="absolute" 
+          w="100%" 
+          h="100%" 
+          onClick={onPop}
+          className="modal-backdrop-enhanced animation-fade-in"
+        />
         {children}
       </Box>
     )
